@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.slide-container { width: 100%; height: 520px; background-color: #BFD9F7; }
+
+.slide-btn-wrapper { position: absolute; bottom: 3em; left: 50%; transform: translateX(-50%); }
+.swiper-wrapper .swiper-slide > a { display: block; }
+.swiper-wrapper .swiper-slide img { width: 951px; height: 520px; margin: 0 auto; }
+
+.slide-btn-wrapper { z-index: 1; }
+
+/* 슬라이드 도트 */
+.swiper-pagination { margin-right: 40px; }
+.swiper-pagination-bullet { width: 9px; height: 9px; margin: 0 var(--swiper-pagination-bullet-horizontal-gap,6px) !important; }  
+.swiper-pagination-bullet-active { background: #303030; }
+
+/* 정지 / 재생 */
+.swiper-control { width: 10px; height: 14px; position: relative !important; margin-right: 20px; margin-top: 8px; }
+.swiper-control > button { position: absolute; top: 0; left: 0; background: 0 0 / 100% 100% no-repeat; }
+.swiper-control > button.btn-pause { width: 10px; height: 13px; background-image: url(../../images/slide/btn_pause.png); }
+.swiper-control > button.btn-play { display: none; width: 9px; height: 14px; background-image: url(../../images/slide/btn_play.png); }
+.swiper-control > button.btn-pause.on { display: none; }
+
+/* prev / next */
+.swiper-btn-box { display: flex; align-items: center; gap: 20px; margin-top: 5px; }
+.swiper-button-next, .swiper-button-prev { position: relative; top: 0; left: 0; right: 0; width: 10px; height: 15px; background: 0 0 / 100% 100% no-repeat; color: transparent; opacity: 0.4; margin-top: 0; }
+.swiper-button-next::after, .swiper-button-prev::after { font-size: 0; }
+.swiper-button-prev { background-image: url(../../images/slide/btn_previous.png); }
+.swiper-button-next { background-image: url(../../images/slide/btn_next.png); }

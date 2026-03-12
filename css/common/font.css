@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* 노토 산스 */
+@font-face {
+	font-family: 'NotoSansKR_R';
+    src: url("../font/NotoSansKR-Regular.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSansKR_M';
+    src: url("../font/NotoSansKR-Medium.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSansKR_SB';
+    src: url("../font/NotoSansKR-SemiBold.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSansKR_B';
+    src: url("../font/NotoSansKR-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSansKR_EB';
+    src: url("../font/NotoSansKR-ExtraBold.woff") format("woff");
+}
+
+/* 노토 serif */
+@font-face {
+	font-family: 'NotoSerifKR_SB';
+    src: url("../font/NotoSerifKR-SemiBold.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSerifKR_B';
+    src: url("../font/NotoSerifKR-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: 'NotoSerifKR_EB';
+    src: url("../font/NotoSerifKR-ExtraBold.woff") format("woff");
+}

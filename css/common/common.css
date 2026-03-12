@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./base.css);
+@import url(./slider.css);
+
+/* color */
+:root {
+    /* 컬러 */
+    --basic-b: #0182CD;
+    --hover-clr: #0083C8;
+}
+
+/* 전체 공통 */
+.nonlink { cursor: default; }
+
+/* header */
+#header { display: flex; justify-content: center; width: 100%; height: 66px; font-weight: 700; }
+#header .header-inner { position: relative; width: 980px; height: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 20; }
+#header .logo { width: 122px; height: 31px; background: url(../../images/main/logo.png) 0 0 / 100% 100% no-repeat; }

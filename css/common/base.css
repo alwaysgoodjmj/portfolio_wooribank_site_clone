@@ -29,3 +29,6 @@ body {
 .slide-btn-wrapper > div { position: static; }
 
 .slide-btn-wrapper .swiper-pagination { width: auto; }
+
+/* main */
+.main-inner { width: 980px; margin: 0 auto; }

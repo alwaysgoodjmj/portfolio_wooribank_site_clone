@@ -14,6 +14,15 @@
 /* 전체 공통 */
 .nonlink { cursor: default; }
 
+/* input */
+input { box-sizing: border-box; }
+input:focus { box-shadow: inset 0 0 0 2px #000; border-radius: 0.2em; }
+
+/* btn */
+button { background: 0 0 / 100% 100% no-repeat; }
+.btn-close { background-image: url(../../images/main/btn_close_search.png); }
+.btn-submit { background-image: url(../../images/main/icon_search_pop.png); }
+
 /* header */
 #header { display: flex; justify-content: center; width: 100%; height: 66px; font-weight: 700; }
 #header .header-inner { position: relative; width: 980px; height: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 20; }

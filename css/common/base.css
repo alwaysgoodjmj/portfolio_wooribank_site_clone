@@ -6,6 +6,7 @@ body {
     font-size: 16px;
     color: #000;
     background-color: #fff;
+    overflow-y: scroll;
 }
 
 .inner {
@@ -27,8 +28,7 @@ body {
 .slide-container { height: 300px; overflow: visible; }
 .slide-btn-wrapper { display: flex; }
 .slide-btn-wrapper > div { position: static; }
-
 .slide-btn-wrapper .swiper-pagination { width: auto; }
 
 /* main */
-.main-inner { width: 980px; margin: 0 auto; }
+.inner-box { width: 980px; margin: 0 auto; }

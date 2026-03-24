@@ -5,24 +5,32 @@
 .util { display: flex; gap: 0.4em; justify-content: center; width: 200px; padding: 0 10px; }
 
 /* box-login */
-.util .box-login { flex-shrink: 0; position: relative; padding: 0.3em 1em; border-radius: 0.3em; }
+.util .box-login { flex-shrink: 0; position: relative; padding: 0.2em 1em; border-radius: 0.3em; }
 .util .box-login.login { background-color: var(--basic-b); color: #fff; }
 .util .box-login.certify { background-color: #E8E8EA; color: inherit; }
 
 /* 개인/기업 선택 */
-.util .select-user { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 10px; padding: 0.6em 1em; background-color: #fff; border: 1px solid #777777; white-space: nowrap; font-size: 0.8em; border-radius: 0.3em; }
+.util .select-user { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 10px; background-color: #fff; border: 1px solid #777777; white-space: nowrap; font-size: 0.8em; border-radius: 0.3em; }
+.util .select-user::before { content: ''; position: absolute; top: -11px; left: 0; width: 100%; height: 11px; background-color: transparent; }
 .util .select-user::after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); content: ''; width: 1px; height: 80%; background-color: #E8E8EA; }
+.util .box-login.ON .select-user { display: block; }
 
 .util .box-login.login .select-user { color: var(--hover-clr); }
-.util .select-user > a:not(:last-of-type) { margin-right: 2em; }
+
+.util .box-login.ON .select-user > a { display: inline-block; padding: 0.6em 1.2em; }
+.util .box-login.login.ON .select-user > a:hover { background-color: var(--basic-b); color: #fff; }
+.util .box-login.certify.ON .select-user > a:hover { background-color: #E8E8EA; color: #000; }
 
 /* gnb */
 .gnb { flex: 1; padding: 0 10px; }
 .gnb .depth1 { display: flex; justify-content: space-around; }
 .gnb .depth1 li { position: relative; }
+.gnb .depth1 .gnb-list::before { position: absolute; top: 100%; left: 0; content: ''; width: 100%; height: 20px; background: transparent; }
 
 .gnb .depth2 { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 10px; min-width: 200px; padding: 15px 25px; background-color: #fff; border: 1px solid #777777; }
 .gnb .depth2::after { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); content: ''; width: 10px; height: 8px; background: url(../images/main/arrow.png) 0 0 / 100% 100% no-repeat; }
+.gnb .gnb-list.ON .depth2 { display: block; }
+
 .gnb .depth2 > li > a { display: inline-block; width: 100%; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid #666666; }
 .gnb .depth2 li > a:not(.nonlink):hover { color: var(--hover-clr); text-decoration: underline ; }
 
@@ -47,7 +55,7 @@
 .quick-menu .quick-main { display: flex; height: 100%; }
 .quick-menu .quick-main > li { position: relative; width: calc((100% - 360px) / 3); height: 100%; background: #3B91F9; color: #fff; }
 .quick-menu .quick-main > li:first-of-type,
-.quick-menu .quick-main > li:last-of-type { width: 180px; }
+.quick-menu .quick-main .btn-quick { width: 180px; }
 .quick-menu .quick-main > li:first-of-type { border-radius: 50px 0 0 50px; background: var(--basic-b); font-size: 0.9em; }
 .quick-menu .quick-main > li:last-of-type { border-radius: 0 50px 50px 0; background: #fff; color: #000; }
 .quick-menu .quick-main > li:nth-of-type(2)::after,
@@ -56,10 +64,23 @@
 .quick-menu .quick-main > li > a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
 .quick-menu .quick-main > li:last-of-type > a { padding-right: 25px; }
 
-.quick-menu .btn-icon { position: absolute; right: 25px; top: 50%; transform: translateY(-50%); width: 12px; height: 22px; background: url(../images/main/btn_quick.png)0 0 / 100% 100% no-repeat; }
+.quick-menu .btn-icon { position: absolute; right: 25px; top: 50%; transform: translateY(-50%); width: 12px; height: 22px; background: url(../images/main/btn_quick.png) 0 0 / 12px 22px no-repeat; }
 
 /* quick-sub */
 .quick-menu .btn-quick .quick-sub { display: none; }
+
+/* quick-sub Active */
+.quick-menu .btn-quick.Active { position: absolute; top: 0; left: 0; width: 100%; display: flex; }
+.quick-menu .quick-main > li:last-of-type.Active { border-radius: 50px; }
+
+.quick-menu .quick-main > li.Active > a { justify-content: flex-end; width: 240px; padding-right: 40px; }
+.quick-menu .btn-quick.Active .btn-icon { right: auto; left: 0; width: 70px; height: 100%; border-radius: 50px 0 0 50px; background-color: var(--basic-b); background-position: 50% 50%; background-image: url(../images/main/btn_quick_active.png); }
+
+.quick-menu .btn-quick.Active .quick-sub { display: block; flex: 1; border-radius: 0 50px 50px 0; font-size: 0.75em; color: #656865; font-weight: 500; }
+.quick-menu .btn-quick.Active .quick-sub > ul { position: relative; height: 100%; display: grid; grid-template-columns: repeat(3, 1fr); padding: 5px 0; }
+.quick-menu .btn-quick.Active .quick-sub > ul::before { position: absolute; top: 50%; transform: translateY(-50%); right: 100%; content: ''; width: 2px; height: 32px; background: #bababa; }
+.quick-menu .btn-quick.Active .quick-sub > ul li { display: flex; align-items: center; justify-content: center; }
+.quick-menu .btn-quick.Active .quick-sub > ul li a:hover { color: var(--basic-b); text-decoration: underline; }
 
 /* add-menu */
 .add-menu { margin: 0 auto; font-size: 1em; font-weight: 700; color: #7F7E7E; }
@@ -69,11 +90,10 @@
 .bank-product { position: relative; display: flex; justify-content: space-between; }
 .bank-product::after { position: absolute; right: 280px; bottom: 0; content: ''; width: 2px; height: 90px; background: #E9F2FF; }
 
-.bank-product ul { display: flex; justify-content: center; }
-.bank-product ul > li > a { display: flex; flex-direction: column; align-items: center; width: calc((980px - 50px) / 11); height: calc((980px - 50px) / 11); padding: 10px; border-radius: 50%; }
-.bank-product ul > li > a:hover { background: #3A8DFD; }
+.bank-product ul { display: flex; justify-content: center; font-size: 0.9em; }
+.bank-product ul > li > a { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px; width: calc((980px - 50px) / 11); height: calc((980px - 50px) / 11); padding: 7px; border-radius: 50%; }
+.bank-product ul > li > a:hover {  background: #3A8DFD; }
 .bank-product ul > li > a:hover > span { color: #fff; }
-.bank-product > div .ico-box { display: block; width: 60px; height: 60px; }
 
 /* 서비스 bank-service */
 .bank-service .cont-wrap { display: flex; justify-content: space-between; }
@@ -119,7 +139,6 @@
 #footer .footer-rights .rights-box ul { display: flex; flex-wrap: wrap; gap: 5px 0; margin-bottom: 10px; }
 #footer .footer-rights .rights-box ul li { position: relative; margin: 0 10px; }
 #footer .footer-rights .rights-box ul li:not(:nth-of-type(6n))::after { position: absolute; left: 100%; top: 50%; transform: translateY(-50%); margin-left: 10px; content: ''; width: 1px; height: 13px; background: #8B8B8B; }
-#footer .footer-rights .rights-box .bold-txt { font-weight: 600; }
 #footer .footer-rights .rights-box > p { margin-left: 10px; }
 
 #footer .footer-rights .awards { margin: 25px 0 0 80px; }
@@ -148,4 +167,4 @@
 .search-container .search-list > ul li:not(:last-of-type)::after { position: absolute; left: 100%; top: 50%; transform: translateY(-50%); content: ''; width: 1px; height: 15px; background: #fff; }
 
 /* 모달 닫기 버튼 */
-.search-container .btn-close { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; }
+.search-container .btn-close { position: absolute; top: 10px; right: 25px; width: 40px; height: 40px; }

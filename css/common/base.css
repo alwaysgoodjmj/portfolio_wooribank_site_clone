@@ -31,4 +31,4 @@ body {
 .slide-btn-wrapper .swiper-pagination { width: auto; }
 
 /* main */
-.inner-box { width: 980px; margin: 0 auto; }
+.inner-box, .sub-inner-box { width: 980px; margin: 0 auto; }

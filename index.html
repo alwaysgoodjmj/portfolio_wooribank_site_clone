@@ -24,14 +24,14 @@
 
             <!-- util -->
             <div class="util">
-              <div class="js-dropdown box-login login">
+              <div class="js-dropdown box-login login" tabindex="0">
                 <span>로그인</span>
                 <div class="select-user">
                   <a href="#"><span>개인</span></a>
                   <a href="#"><span>기업</span></a>
                 </div>
               </div>
-              <div class="js-dropdown box-login certify">
+              <div class="js-dropdown box-login certify" tabindex="0">
                 <span>인증센터</span>
                 <div class="select-user">
                   <a href="#"><span>개인</span></a>
@@ -45,7 +45,7 @@
                 <ul class="depth1">
                   <li class="js-dropdown gnb-list">
                     <a href="#">개인</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#">개인뱅킹</a>
                         <ul class="depth3">
@@ -67,7 +67,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">기업</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#">기업뱅킹</a>
                         <ul class="depth3">
@@ -89,7 +89,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">자산관리</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#">개인뱅킹</a>
                         <ul class="depth3">
@@ -103,7 +103,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">금융상품</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#">개인뱅킹</a>
                         <ul class="depth3">
@@ -123,7 +123,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">카드</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#">카드</a>
                         <ul class="depth3">
@@ -137,7 +137,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">은행소개</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#none" class="nonlink">은행소개</a>
                         <ul class="depth3">
@@ -152,7 +152,7 @@
                   </li>
                   <li class="js-dropdown gnb-list">
                     <a href="#">GLOBAL</a>
-                    <ul class="depth2">
+                    <ul class="depth2 to-btm">
                       <li>
                         <a href="#none" class="nonlink">LANGUAGE</a>
                         <ul class="depth3">
@@ -169,11 +169,10 @@
                 </ul>
             </nav>
 
-            <div class="search-modal">
-              <button class="btn-search">
-                <img src="images/main/icon_search.png" alt="">
-              </button>
-            </div>
+            <!-- btn-search -->
+            <button class="btn-search">
+              <img src="images/main/icon_search.png" alt="">
+            </button>
         </div>
     </header>
 
@@ -220,19 +219,19 @@
             </div>
         </section>
 
-        <div class="inner-box">
+        <section class="inner-box">
           <!-- quick-menu -->
-          <section class="quick-menu">
+          <div class="quick-menu">
             <ul class="quick-main">
               <li><a href="#">다른 금융<br>정보 조회</a></li>
               <li><a href="#">조회</a></li>
               <li><a href="#">이체</a></li>
               <li><a href="#">환율</a></li>
               <li class="btn-quick">
-                <a href="#">
+                <div class="btn-box">
                   <span>빠른메뉴</span>
-                  <button class="btn-icon"></button>
-                </a>
+                  <button class="btn-icon" aria-label="빠른 메뉴 전환 버튼"></button>
+                </div>
                 <div class="quick-sub">
                   <ul>
                     <li class="bold-txt"><a href="#">스피드계좌조회</a></li>
@@ -245,22 +244,22 @@
                 </div>
               </li>
             </ul>
-          </section>
+          </div>
 
           <!-- add-menu -->
-          <section class="add-menu">
+          <div class="add-menu">
             <ul>
               <li><a href="#">금융 소비자 보호</a></li>
               <li><a href="#">보안뉴스</a></li>
               <li><a href="#">상품/약관 공시</a></li>
             </ul>
-          </section>
+          </div>
 
           <!-- bank-product -->
-          <section class="bank-product">
+          <div class="bank-product">
               <!-- box-product -->
               <div class="box-product">
-                  <h3>금융상품</h3>
+                  <h2>금융상품</h2>
                   <ul class="product-list">
                       <li>
                           <a href="#">
@@ -330,7 +329,7 @@
               </div>
               <!-- box-card -->
               <div class="box-card">
-                  <h3>카드</h3>
+                  <h2>카드</h2>
                   <ul class="card-list">
                       <li>
                           <a href="#">
@@ -358,11 +357,11 @@
                       </li>
                   </ul>
               </div>
-          </section>
+          </div>
           
           <!-- bank-service -->
-          <section class="bank-service">
-            <h3>서비스</h3>
+          <div class="bank-service">
+            <h2>서비스</h2>
 
             <div class="cont-wrap">
               <a href="#" class="service-box">
@@ -393,12 +392,12 @@
                 </div>
               </a>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
         <!-- board-news -->
         <section class="board-news">
-          <div class="inner-box">
+          <div class="sub-inner-box">
             <div class="news">
               <div class="board-tit">
                 <p>새소식</p>
@@ -446,17 +445,122 @@
         <div class="box-add">
           <div class="link">
             <ul>
-              <li class="ars">
+              <li class="js-dropdown ars" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
                 <span>대표 1588-5000</span>
+                <ul class="depth2 to-top">
+                  <li>
+                    <span class="main_tit">ARS 이용안내</span>
+                    <ul class="depth3">
+                      <li>
+                        <span class="tit">대표 전화</span>
+                        <div class="number">
+                          <p>1588-5000 / 1599-5000 / 1533-5000</p>
+                          <p>82-2-2006-5000(해외)</p>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="tit">고객의 말씀</span>
+                        <div class="number">
+                          <p>080-365-5000</p>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="tit">신규 상담</span>
+                        <div class="number">
+                          <p>
+                            <span>예적금</span>
+                            <span>1599-8100</span>
+                          </p>
+                          <p>
+                            <span>대출</span>
+                            <span>1599-8300</span>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="tit">어르신 전용</span>
+                        <div class="number">
+                          <p>1599-6599</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
-              <li class="etc">
+              <li class="js-dropdown etc" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
                 <span>기타서비스</span>
+                <ul class="depth2 to-top">
+                  <li>
+                    <span class="main_tit">기타서비스</span>
+                    <ul class="depth3">
+                      <li>
+                        <a href="#">법원환급금조회</a>
+                      </li>
+                      <li>
+                        <a href="#">미교부국민주조회</a>
+                      </li>
+                      <li>
+                        <a href="#">상조회사예치금조회</a>
+                      </li>
+                      <li>
+                        <a href="#">예금잔액증명서발급조회</a>
+                      </li>
+                      <li>
+                        <a href="#">지급보증서발급조회</a>
+                      </li>
+                      <li>
+                        <a href="#">서울시예치금내역조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                </ul>
               </li>
-              <li class="lan">
+              <li class="js-dropdown lan" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
                 <span>LANGUAGE</span>
+                <ul class="depth2 to-top">
+                  <li>
+                    <span class="main_tit">LANGUAGE</span>
+                    <ul class="depth3">
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">中國語</a></li>
+                      <li><a href="#">日本語</a></li>
+                      <li><a href="#">Tagalog</a></li>
+                      <li><a href="#">tiếng Việt</a></li>
+                      <li><a href="#">Монгол хэл</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
-              <li class="fam">
+              <li class="js-dropdown fam" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
                 <span>패밀리사이트</span>
+                <ul class="depth2 to-top">
+                  <li>
+                    <span class="main_tit">패밀리사이트</span>
+                    <ul class="depth3">
+                      <li>
+                        <a href="#">우리금융지주</a>
+                        <a href="#">우리카드</a>
+                        <a href="#">우리금융캐피탈</a>
+                        <a href="#">우리투자증권</a>
+                        <a href="#">우리자산신탁</a>
+                        <a href="#">우리자산운용</a>
+                        <a href="#">우리금융저축은행</a>
+                        <a href="#">동양생명</a>
+                      </li>
+                      <li>
+                        <a href="#">우리신용정보</a>
+                        <a href="#">우리펀드서비스</a>
+                        <a href="#">우리PE</a>
+                        <a href="#">우리FIS</a>
+                        <a href="#">우리금융경영연구소</a>
+                        <a href="#">우리다문화장학재단</a>
+                        <a href="#">우리미소금융재단</a>
+                        <a href="#">ABL생명</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -514,7 +618,7 @@
       </div>
     </footer>
 
-    <!-- 팝업 -->
+    <!-- 모달 컨텐츠 -->
     <!-- search-container -->
     <div class="search-container">
       <div class="search-box">

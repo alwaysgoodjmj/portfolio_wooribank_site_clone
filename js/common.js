@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dropDownItems = document.querySelectorAll('.js-dropdown');
     const btnQuick = document.querySelector('.btn-quick');
-    const btnTrigger = document.querySelector('.btn-quick > a');
+    const btnTrigger = document.querySelector('.btn-box');
     const btnSearch = document.querySelector('.btn-search');
     const searchModal = document.querySelector('.search-container');
     const btnClose = document.querySelector('.btn-close');
@@ -21,19 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // quick-menu
     if (btnQuick && btnTrigger) {
         btnTrigger.addEventListener('click', (e) => {
-            if (btnQuick.classList.contains('Active')) {
-                btnQuick.classList.toggle('Active');
-            } else {
-                e.preventDefault();
-                btnQuick.classList.add('Active');
-            }
+            e.preventDefault();
+            btnQuick.classList.toggle('Active');
         });
-    
-        const subLink = btnQuick.querySelectorAll('.quick-sub > a');
-        subLink.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
+
+        btnTrigger.addEventListener('keydown', (e) => {
+            if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+                e.preventDefault();
+                btnTrigger.click(); 
+            }
         });
     }
 
